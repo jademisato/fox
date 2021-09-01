@@ -20,12 +20,28 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: whiteColor,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
+
+const MaterialColor whiteColor = const MaterialColor(
+  0xFFFCFAF8,
+  const <int, Color>{
+    50: const Color(0xFFFCFAF8),
+    100: const Color(0xFFFCFAF8),
+    200: const Color(0xFFFCFAF8),
+    300: const Color(0xFFFCFAF8),
+    400: const Color(0xFFFCFAF8),
+    500: const Color(0xFFFCFAF8),
+    600: const Color(0xFFFCFAF8),
+    700: const Color(0xFFFCFAF8),
+    800: const Color(0xFFFCFAF8),
+    900: const Color(0xFFFCFAF8),
+  },
+);
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
