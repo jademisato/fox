@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
+                  // decoration: BoxDecoration(color: Colors.yellow,),
                   padding: const EdgeInsets.only(bottom: 8),
                   child: const Text(
                     'Good afternoon. You\'ve created 1 folio in total.',
@@ -31,6 +32,24 @@ class MyApp extends StatelessWidget {
               primary: Colors.red[500],
               backgroundColor: Colors.white,
               padding: EdgeInsets.fromLTRB(30, 25, 30, 25),
+            ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.crop_original,
+              color: Colors.red,
+              size: 30.0,
+              semanticLabel: 'Grid View',
+            ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.list_alt,
+              color: Colors.red,
+              size: 30.0,
+              semanticLabel: 'List View',
             ),
           ),
         ],
