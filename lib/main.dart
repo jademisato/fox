@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  // decoration: BoxDecoration(color: Colors.yellow,),
                   padding: const EdgeInsets.only(bottom: 8),
                   child: const Text(
                     'Good afternoon. You\'ve created 1 folio in total.',
@@ -56,6 +55,41 @@ class MyApp extends StatelessWidget {
       ),
     );
 
+    Widget bottomSection = Container(
+      padding: const EdgeInsets.all(32),
+      child: Row(
+        children: [
+          Directionality(
+            textDirection: TextDirection.rtl,
+            child: TextButton.icon(
+              onPressed: () {},
+              style: TextButton.styleFrom(
+                padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+                backgroundColor: Colors.red,
+              ),
+              icon: Icon(
+                Icons.chevron_left_outlined,
+                color: Colors.white,
+              ),
+              label: Text(
+                "VIEW FOLIO",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.share_outlined,
+              color: Colors.white,
+              size: 30.0,
+              semanticLabel: 'Copy Share Link',
+            ),
+          ),
+        ],
+      ),
+    );
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -83,7 +117,12 @@ class MyApp extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: topSection,
+          child: Column(
+            children: [
+              topSection,
+              bottomSection,
+            ],
+          ),
         ),
       ),
     );
