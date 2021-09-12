@@ -120,11 +120,47 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: [
               topSection,
+              const InputForm(),
               bottomSection,
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class InputForm extends StatelessWidget {
+  const InputForm({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+          child: TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              hintText: 'Add Title',
+            ),
+            style: TextStyle(
+              fontSize: 40.0,
+              height: 1.0
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+          child: TextFormField(
+            decoration: const InputDecoration(
+              border: UnderlineInputBorder(),
+              labelText: 'Add Description',
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
