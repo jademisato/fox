@@ -146,8 +146,12 @@ class InputForm extends StatelessWidget {
               constraints: BoxConstraints(maxHeight: 64.0, maxWidth: 500.0),
               child: TextField(
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
+                  border: InputBorder.none,
+                  focusedBorder: InputBorder.none,
+                  contentPadding: EdgeInsets.all(1.0),
                   hintText: 'Add Title',
+                  filled: true,
+                  hoverColor: Colors.red.withOpacity(0.1),
                 ),
                 style: TextStyle(fontSize: 40.0, height: 1.0),
               ),
@@ -159,8 +163,12 @@ class InputForm extends StatelessWidget {
               constraints: BoxConstraints(maxHeight: 40.0, maxWidth: 320.0),
               child: TextFormField(
                 decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Add Description',
+                  border: InputBorder.none,
+                  focusedBorder: InputBorder.none,
+                  contentPadding: EdgeInsets.all(1.0),
+                  hintText: 'Add Description',
+                  filled: true,
+                  hoverColor: Colors.red.withOpacity(0.1),
                 ),
               ),
             ),
