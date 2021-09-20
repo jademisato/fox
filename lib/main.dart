@@ -153,7 +153,9 @@ class InputForm extends StatelessWidget {
                   filled: true,
                   hoverColor: Colors.red.withOpacity(0.1),
                 ),
-                style: TextStyle(fontSize: 40.0, height: 1.0),
+                style: TextStyle(
+                  fontFamily: 'DMSerifText',
+                  fontSize: 40.0, height: 1.0),
               ),
             ),
           ),
