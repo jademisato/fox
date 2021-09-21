@@ -143,31 +143,30 @@ class InputForm extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
             child: ConstrainedBox(
-              constraints: BoxConstraints(maxHeight: 64.0, maxWidth: 500.0),
+              constraints: BoxConstraints(maxWidth: 500.0),
               child: TextField(
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   focusedBorder: InputBorder.none,
-                  contentPadding: EdgeInsets.all(1.0),
+                  contentPadding: EdgeInsets.only(left: 1.0),
                   hintText: 'Add Title',
                   filled: true,
                   hoverColor: Colors.red.withOpacity(0.1),
                 ),
-                style: TextStyle(
-                  fontFamily: 'DMSerifText',
-                  fontSize: 40.0, height: 1.0),
+                style: TextStyle(fontFamily: 'DMSerifText', fontSize: 40.0),
               ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
             child: ConstrainedBox(
-              constraints: BoxConstraints(maxHeight: 40.0, maxWidth: 320.0),
+              constraints: BoxConstraints(
+                  minHeight: 20.0, maxHeight: 20.0, maxWidth: 320.0),
               child: TextFormField(
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   focusedBorder: InputBorder.none,
-                  contentPadding: EdgeInsets.all(1.0),
+                  // contentPadding: EdgeInsets.only(left: 1.0),
                   hintText: 'Add Description',
                   filled: true,
                   hoverColor: Colors.red.withOpacity(0.1),
