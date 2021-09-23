@@ -33,22 +33,35 @@ class MyApp extends StatelessWidget {
               padding: EdgeInsets.fromLTRB(30, 25, 30, 25),
             ),
           ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.crop_original,
-              color: Colors.red,
-              size: 30.0,
-              semanticLabel: 'Grid View',
+          Container(
+            margin: EdgeInsets.only(left: 10.0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(2),
+              color: Colors.white,
             ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.list_alt,
-              color: Colors.red,
-              size: 30.0,
-              semanticLabel: 'List View',
+            child: Row(
+              children: [
+                IconButton(
+                  highlightColor: Colors.blue,
+                  hoverColor: Colors.green,
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.crop_original,
+                    color: Colors.red,
+                    size: 30.0,
+                    semanticLabel: 'Grid View',
+                  ),
+                ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.list_alt,
+                    color: Colors.red,
+                    size: 30.0,
+                    semanticLabel: 'List View',
+                  ),
+                ),
+              ],
             ),
           ),
         ],
