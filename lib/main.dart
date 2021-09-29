@@ -110,14 +110,46 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          leading: Icon(Icons.account_circle_rounded),
           title: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                'images/logo.png',
-                fit: BoxFit.contain,
-                height: 32,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.account_circle_rounded,
+                  color: Colors.red,
+                  size: 32.0,
+                  semanticLabel: 'Open User Info panel',
+                ),
+              ),
+              Stack(
+                children: <Widget>[
+                  Ink(
+                    decoration: const ShapeDecoration(
+                      // color: Colors.grey,
+                      shape: CircleBorder(),
+                    ),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.fingerprint_outlined,
+                        color: Colors.red,
+                        size: 32.0,
+                        semanticLabel: 'Switch to Touch Mode',
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Expanded(
+                child: Center(
+                  child: Image.asset(
+                    'images/logo.png',
+                    fit: BoxFit.contain,
+                    height: 32,
+                  ),
+                ),
               ),
             ],
           ),
