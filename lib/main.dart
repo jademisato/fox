@@ -154,21 +154,80 @@ class MyApp extends StatelessWidget {
             ],
           ),
         ),
-        body: Container(
-          constraints: BoxConstraints.expand(),
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('images/home_backdround_img.webp'),
-              fit: BoxFit.cover,
+        body: Stack(
+          children: <Widget>[
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                image: DecorationImage(
+                  image: AssetImage('images/home_backdround_img.webp'),
+                  fit: BoxFit.fill,
+                ),
+              ),
             ),
-          ),
-          child: Column(
-            children: [
-              topSection,
-              const InputForm(),
-              bottomSection,
-            ],
-          ),
+            Container( // Black shadow bottpmLeft to topRight
+              constraints: BoxConstraints.expand(),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment(-1.0, 1.0),
+                  end: Alignment(0.0, 0.0),
+                  stops: [
+                    0.1,
+                    0.9,
+                  ],
+                  colors: <Color>[
+                    Colors.black,
+                    Colors.black.withOpacity(0.0),
+                  ],
+                ),
+              ),
+            ),
+            Container( // Black shadow left to right
+              constraints: BoxConstraints.expand(),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment(-1.0, 0.0),
+                  end: Alignment(0.0, 0.0),
+                  stops: [
+                    0.1,
+                    0.9,
+                  ],
+                  colors: <Color>[
+                    Colors.black.withOpacity(0.8),
+                    Colors.black.withOpacity(0.0),
+                  ],
+                ),
+              ),
+            ),
+            // Container( // TODO: Add a black shadow bottom to top
+            //   constraints: BoxConstraints.expand(),
+            //   decoration: BoxDecoration(
+            //     // fit: BoxFit.fill,
+            //     gradient: LinearGradient(
+            //       begin: Alignment(0.0, 0.0),
+            //       end: Alignment(0.0, -1.0),
+            //       stops: [
+            //         0.1,
+            //         0.9,
+            //       ],
+            //       colors: <Color>[
+            //         // Colors.black,
+            //         // Colors.indigo[800],
+            //         Color(0xff000000).withOpacity(0.8),
+            //         // Colors.white,
+            //         Colors.white.withOpacity(0.0),
+            //       ],
+            //     ),         
+            //   ),
+            // )
+            Column(
+              children: [
+                topSection,
+                const InputForm(),
+                bottomSection,
+              ],
+            ),
+          ],
         ),
       ),
     );
