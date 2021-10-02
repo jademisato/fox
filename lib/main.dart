@@ -19,18 +19,33 @@ class MyApp extends StatelessWidget {
                   padding: const EdgeInsets.only(bottom: 8),
                   child: const Text(
                     'Good afternoon. You\'ve created 1 folio in total.',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w300,
+                    ),
                   ),
                 ),
               ],
             ),
           ),
-          TextButton(
-            child: Text('+ NEW FOLIO'),
+          TextButton.icon(
             onPressed: () {},
-            style: OutlinedButton.styleFrom(
-              primary: Colors.red[500],
+            style: TextButton.styleFrom(
+              padding: EdgeInsets.fromLTRB(23, 18, 23, 18),
               backgroundColor: Colors.white,
-              padding: EdgeInsets.fromLTRB(30, 25, 30, 25),
+            ),
+            icon: Icon(
+              Icons.add,
+              color: Colors.red[500],
+              size: 18.0,
+            ),
+            label: Text(
+              "NEW FOLIO",
+              style: TextStyle(
+                color: Colors.red[500],
+                fontFamily: 'Raleway',
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           Container(
@@ -77,7 +92,7 @@ class MyApp extends StatelessWidget {
             child: TextButton.icon(
               onPressed: () {},
               style: TextButton.styleFrom(
-                padding: EdgeInsets.fromLTRB(30, 20, 30, 20),
+                padding: EdgeInsets.fromLTRB(23, 18, 23, 18),
                 backgroundColor: Colors.red,
               ),
               icon: Icon(
@@ -86,7 +101,11 @@ class MyApp extends StatelessWidget {
               ),
               label: Text(
                 "VIEW FOLIO",
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Raleway',
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
@@ -165,7 +184,8 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
-            Container( // Black shadow bottpmLeft to topRight
+            Container(
+              // Black shadow bottpmLeft to topRight
               constraints: BoxConstraints.expand(),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -182,7 +202,8 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
-            Container( // Black shadow left to right
+            Container(
+              // Black shadow left to right
               constraints: BoxConstraints.expand(),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -217,7 +238,7 @@ class MyApp extends StatelessWidget {
             //         // Colors.white,
             //         Colors.white.withOpacity(0.0),
             //       ],
-            //     ),         
+            //     ),
             //   ),
             // )
             Column(
@@ -254,10 +275,17 @@ class InputForm extends StatelessWidget {
                   focusedBorder: InputBorder.none,
                   contentPadding: EdgeInsets.only(left: 1.0),
                   hintText: 'Add Title',
+                  hintStyle: TextStyle(
+                    color: Colors.grey,
+                  ),
                   filled: true,
                   hoverColor: Colors.red.withOpacity(0.1),
                 ),
-                style: TextStyle(fontFamily: 'DMSerifText', fontSize: 40.0),
+                style: TextStyle(
+                  fontFamily: 'DMSerifText',
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.w300,
+                ),
               ),
             ),
           ),
@@ -272,6 +300,9 @@ class InputForm extends StatelessWidget {
                   focusedBorder: InputBorder.none,
                   // contentPadding: EdgeInsets.only(left: 1.0),
                   hintText: 'Add Description',
+                  hintStyle: TextStyle(
+                    color: Colors.grey,
+                  ),
                   filled: true,
                   hoverColor: Colors.red.withOpacity(0.1),
                 ),
