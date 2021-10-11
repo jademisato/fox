@@ -250,6 +250,29 @@ class MyApp extends StatelessWidget {
             ),
           ],
         ),
+
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: const Icon(Icons.add, color: Colors.white, size: 50.0,),
+          backgroundColor: Colors.red,
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.apps),
+              label: 'apps',
+              backgroundColor: Colors.red,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.format_list_bulleted),
+              label: 'list',
+              backgroundColor: Colors.green,
+            ),
+          ],
+          selectedItemColor: Colors.red,
+          unselectedItemColor: Colors.grey,
+        ),
       ),
     );
   }
