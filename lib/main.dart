@@ -252,11 +252,28 @@ class MyApp extends StatelessWidget {
         ),
 
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: const Icon(Icons.add, color: Colors.white, size: 50.0,),
-          backgroundColor: Colors.red,
+        floatingActionButton: Padding(
+          padding: EdgeInsets.only(top: 20),
+          child: SizedBox(
+            height: 70,
+            width: 70,
+            child: FloatingActionButton(
+              backgroundColor: Colors.red,
+              elevation: 0,
+              onPressed: () {},
+              child: Container(
+                height:70,
+                width: 70,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 8),
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(Icons.add, color: Colors.white, size: 50.0,),
+              ),
+            ),
+          ),
         ),
+
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
