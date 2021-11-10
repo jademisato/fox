@@ -2,11 +2,16 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MyApp());
+  runApp(MaterialApp(
+    home: MyApp()
+  ));
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
+    print(screenSize.width);
     Widget topSection = Container(
       padding: const EdgeInsets.all(32),
       child: Row(
