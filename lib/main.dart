@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
   runApp(MaterialApp(
     home: MyApp()
   ));
@@ -10,8 +9,18 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // Responsive start
+    bool _isVisible = false;
+
     var screenSize = MediaQuery.of(context).size;
     print(screenSize.width);
+    if (screenSize.width < 600) {
+      _isVisible = true;
+    } else {
+      _isVisible = false;
+    }
+    // Responsive end
+
     Widget topSection = Container(
       padding: const EdgeInsets.all(32),
       child: Row(
