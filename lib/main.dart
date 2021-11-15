@@ -265,26 +265,36 @@ class MyApp extends StatelessWidget {
           ],
         ),
 
+        // footer start
+        // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        // floatingActionButton: Padding(
+        //   padding: EdgeInsets.only(top: 20),
+        //   child: SizedBox(
+        //     height: 70,
+        //     width: 70,
+
+        // TODO: fix floatingActionButton size
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: Padding(
-          padding: EdgeInsets.only(top: 20),
-          child: SizedBox(
-            height: 70,
-            width: 70,
-            child: FloatingActionButton(
-              backgroundColor: Colors.red,
-              elevation: 0,
-              onPressed: () {},
+        floatingActionButton: Visibility(
+          visible: _isVisible,
+          child: FloatingActionButton(
+            backgroundColor: Colors.red,
+            elevation: 0,
+            onPressed: () {},
               child: Container(
-                height:70,
-                width: 70,
+                // padding: EdgeInsets.only(top: 20),
+                // height: 70,
+                // width: 70,
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.white, width: 8),
                   shape: BoxShape.circle,
                 ),
-                child: Icon(Icons.add, color: Colors.white, size: 50.0,),
+                child: Icon(
+                  Icons.add,
+                  color: Colors.white,
+                  size: 50.0,
+                ),
               ),
-            ),
           ),
         ),
 
@@ -304,6 +314,7 @@ class MyApp extends StatelessWidget {
           selectedItemColor: Colors.red,
           unselectedItemColor: Colors.grey,
         ),
+        // footer end
       ),
     );
   }
